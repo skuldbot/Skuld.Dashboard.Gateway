@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  dashgateway:
+    image: node
+    build: .
+    env_file: .env
