@@ -18,6 +18,10 @@ app.use((req, res, next) => {
 });
 
 async function IsValidToken(token, resolve, reject) {
+  if(token === undefined) {
+    reject("token required");
+  }
+
   let split = token.split(' ');
 
   if(split.length === 0) {
